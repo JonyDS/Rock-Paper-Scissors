@@ -9,53 +9,18 @@
             computerPlay = () => Math.floor(Math.random()*3);
             //0-rock  1-paper  2-scissors
             
-            function playRound(playerSelection, computerSelection){
-                playerSelection = prompt('Rock 0 |  Paper 1 |  Scissors 2');
-                computerSelection = Number(computerPlay());
+            function playRound(playerSelection){
+                playerSelection = Number(prompt('Rock 0 |  Paper 1 |  Scissors 2'));
+                const computerSelection = Number(computerPlay());
 
-                if(playerSelection === comp){
-                    alert.log('tie');
-
-                }else if ((player-comp)!==2){
-                    if(player>comp){
-                        alert.log('win');
-                    }else{
-                        alert.log('lose');
-                    }
-
+                if (playerSelection === computerSelection) alert.log('tie');
+                else if (Math.abs(playerSelection-computerSelection) !== 2){
+                    if (playerSelection > computerSelection) alert.log('win');
+                    else alert.log('lose');
+                    
                 }else{
-                    if(player==2){
-                        alert.log('win');
-                    }else{
-                        alert.log('lose');
-                    } 
-
-
-                switch(playerSelection.toUpperCase()){
-
-                    case "ROCK"://0
-                        
-                        if(computerSelection === 0) alert('Is a Tie');//s
-                        else if(computerSelection === 1) alert('You Lose');//s
-                        else alert('You Win');
-                        break;
-
-                    case "PAPER"://1
-
-                        if(computerSelection === 1) alert('Is a Tie');//s
-                        else if(computerSelection === 2) alert('You Lose');
-                        else alert('You Win');//s
-                        break;
-
-                    case 'SCISSORS':
-                    case 'SCISORS'://2
-                        if(computerSelection === 2) alert('Is a Tie');//s
-                        else if(computerSelection === 0) alert('You Lose');
-                        else alert('You Win');//s
-                        break;
-                    default:
-                        alert('ERROR');
-                        break;
+                    if (playerSelection === 2) alert.log('win');
+                    else alert.log('lose');
                 }
 
             }
