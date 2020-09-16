@@ -1,10 +1,36 @@
 
 <html>
     <head>
-
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <img src='https://miro.medium.com/max/800/1*8du96SQUQ0NlWmWvVu20Zw.png'>
+        <h2>Rock Paper Scissors</h2>
+        <div id='score'>
+
+        </div>
+
+        <div id='buttons'>
+            <div>
+                <button name='ROCKBUTTON' class='buttonRPS' id='rock' value=0 ><img src='https://miro.medium.com/max/800/1*8du96SQUQ0NlWmWvVu20Zw.png'></button>
+                <label >Rock</label>
+            </div>
+            
+            <div>
+                <button name="RPS" class='buttonRPS' id='paper' value=1 ><img src='https://miro.medium.com/max/800/1*8du96SQUQ0NlWmWvVu20Zw.png'></button>
+                <label >Paper</label>   
+            </div>
+
+            <div>
+                <button name="RPS" class='buttonRPS' id='scissors' value=2 ><img src='https://miro.medium.com/max/800/1*8du96SQUQ0NlWmWvVu20Zw.png'></button>
+                <label >Scissors</label>
+            </div>
+        </div>
+
+
         <script>
             computerPlay = () => Math.floor(Math.random()*3);
             //0-rock  1-paper  2-scissors
